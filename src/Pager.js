@@ -61,7 +61,7 @@ class View extends PagerElement {
   setTabbableChildren() {
     // only allow tabbing in current slides
     for (let i = 0; i < this.tabbableChildren.length; i++) {
-      this.tabbableChildren[i].tabIndex = this.isCurrent ? 0 : -1
+      this.tabbableChildren[i].tabIndex = 0;
     }
   }
 
