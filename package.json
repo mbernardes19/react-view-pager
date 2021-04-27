@@ -13,6 +13,7 @@
     "dev": "webpack-dev-server --inline --hot --progress --colors --host 0.0.0.0 --devtool eval",
     "postbuild": "NODE_ENV=production TARGET=minify webpack --config webpack.prod.config.js",
     "prebuild": "rm -rf dist && mkdir dist",
+    "prepare": "npm run build",
     "prepublish": "npm run build",
     "test": "mocha tests/.setup.js --reporter spec tests/**/*.js",
     "deploy": "NODE_ENV=production TARGET=minify webpack && git-directory-deploy --directory example --branch gh-pages"
